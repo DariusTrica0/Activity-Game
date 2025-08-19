@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Activity Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="mainTitle">Activity Game</h1>
+  <!-- Menu -->
+  <div id="menuSection" class="section">
+    <button id="startBtn">Start</button>
+  </div>
+  <!-- Options -->
+  <div id="optionsSection" class="section" style="display:none;">
+    <button id="newGameOptionBtn">Creează joc nou</button>
+    <button id="joinGameOptionBtn">Intră într-un joc existent</button>
+  </div>
+  <!-- Create New Game -->
+  <div id="newGameSection" class="section" style="display:none;">
+    <h2>Creează Joc Nou</h2>
+    <input type="text" id="newGameName" placeholder="Nume Joc">
+    <input type="text" id="hostName" placeholder="Numele tău (Host)">
+    <button id="createNewGameBtn">Creează Joc</button>
+  </div>
+  <!-- Join Game -->
+  <div id="joinGameSection" class="section" style="display:none;">
+    <h2>Intră în Jocul Există</h2>
+    <input type="number" id="joinGameId" placeholder="Game ID">
+    <input type="text" id="joinPlayerName" placeholder="Nume">
+    <button id="joinGameBtn">Intră în Joc</button>
+  </div>
+  <!-- Waiting Room -->
+  <div id="waitingRoomSection" class="section" style="display:none;">
+    <h2>Waiting Room</h2>
+    <p id="gameIdInfo"></p>
+    <p id="waitingMessage">Așteptăm să se alăture toți jucătorii.</p>
+    <ul id="playersList"></ul>
+    <div id="teamAssignmentSection" style="display:none;">
+      <h3>Asignare Echipe (Host)</h3>
+      <input type="number" id="assignPlayerId" placeholder="ID Jucător">
+      <input type="number" id="assignTeamId" placeholder="ID Echipă">
+      <button id="assignPlayerBtn">Asignează Jucător la Echipă</button>
+    </div>
+      <div id="createTeamSection" style="margin:10px 0; display:none;">
+        <h3>Creează Echipă (Host)</h3>
+        <input type="text" id="teamName" placeholder="Nume Echipa">
+        <button id="createTeamBtn">Creează Echipă</button>
+        <p id="createdTeamInfo"></p>
+        <h4 style="margin-top:20px; margin-bottom:8px;">Șterge Echipa</h4>
+        <label>Player ID:</label>
+        <input type="number" id="unassignPlayerId" placeholder="ID jucător" />
+        <button id="btnUnassign">Șterge echipa</button>
+        <h4 style="margin-top:20px; margin-bottom:8px;">Inversează Echipele</h4>
+        <label>Jucător A:</label>
+        <input type="number" id="swapA" />
+        <label>Jucător B:</label>
+        <input type="number" id="swapB" />
+        <button id="btnSwap">Swap Teams</button>
+  </div>
+    <button id="startGameBtn" style="display:none;">Start Joc</button>
+  </div>
+  
+  <!-- Scoreboard -->
+  <div id="scoreBoard" style="display:none;">
+    <div id="team1Score">Echipa 1: 0p</div>
+    <div id="team2Score">Echipa 2: 0p</div>
+  </div>
+  <!-- Game Section -->
+  <div id="gameSection" class="section" style="display:none;">
+    <h2>Jocul a început!</h2>
+    <div id="gameInfo"></div>
+   <!-- Container pentru canvas sau imagine -->
+   <div id="drawingCanvasContainer">
+     <canvas id="drawingCanvas" width="400" height="300"></canvas>
+   </div>
+   <button id="showDrawingBtn">Afișează desenul</button><br>
+    <div id="toolButtons" style="margin-top: 8px;">
+      <button id="btnPencil">Creion</button>
+      <button id="btnEraser">Gumă</button>
+    </div>
+    <div id="timerDisplay" style="font-size: 20px; margin: 10px 0;">Timp rămas: 90s</div>
+    <h3>Chat Live</h3>
+    <div id="chatBox"></div>
+   <input type="text" id="chatInput" placeholder="Scrie un mesaj...">
+   <button id="sendGuessBtn">Trimite răspuns</button>
+   <button id="btnClearDrawing">Şterge desen</button>
+  
+  <script src="app.js" defer></script>
+</body>
+</html>
