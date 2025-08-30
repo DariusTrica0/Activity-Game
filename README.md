@@ -15,7 +15,7 @@ Proiectul folosește **FastAPI + SQLAlchemy (Python)** pentru backend și **HTML
   - Chat live și trimitere de răspunsuri  
   - Timer automat (90s) pentru fiecare rundă  
   - Atribuirea rândului și afișarea cuvântului doar jucătorului activ  
-- 📊 Scoreboard în timp real pentru echipe  
+- 📊 Scoreboard în timp real pentru echipe.  
 - 🔌 Comunicare în timp real prin **WebSockets**  
 
 ---
