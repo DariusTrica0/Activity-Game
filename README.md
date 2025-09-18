@@ -1,42 +1,34 @@
-# 🎨 Activity Game
+#  Activity Game
 
-**Activity Game** este o aplicație web multiplayer ce reproduce mecanica clasicului joc **Activity**: jucătorii trebuie să **deseneze**, **descrie** sau să facă echipă pentru a ghici cuvintele într-un timp limitat.  
-Proiectul folosește **FastAPI + SQLAlchemy (Python)** pentru backend și **HTML, CSS, JavaScript (vanilla)** pentru interfața client.
-
----
-
-## 🚀 Funcționalități
-
-- 🔑 Creare cont/joc nou sau alăturare la un joc existent  
-- 👫 Creare și gestionare echipe (assign, unassign, swap)  
-- 📝 Lobby de așteptare + afișare lista jucători  
-- 🎮 Mecanici de joc:
-  - Desene live pe canvas (pencil + gumă)  
-  - Chat live și trimitere de răspunsuri  
-  - Timer automat (90s) pentru fiecare rundă  
-  - Atribuirea rândului și afișarea cuvântului doar jucătorului activ  
-- 📊 Scoreboard în timp real pentru echipe.  
-- 🔌 Comunicare în timp real prin **WebSockets**  
+**Activity Game** is a multiplayer web application that recreates the mechanics of the classic **Activity** board game: players must **draw**, **describe**, or team up to guess words within a limited time.  
+The project uses **FastAPI + SQLAlchemy (Python)** for the backend and **HTML, CSS, Vanilla JavaScript** for the client interface.
 
 ---
 
-## 🛠️ Tehnologii
+##  Features
+
+-  Create account/new game or join an existing game  
+-  Create and manage teams (assign, unassign, swap)  
+- Waiting lobby + display of player list  
+-  Game mechanics:
+  - Live drawing on canvas (pencil + eraser)  
+  - Live chat and answer submission  
+  - Automatic timer (90s) for each round  
+  - Turn assignment and word visibility only for the active player  
+-  Real-time team scoreboard  
+-  Real-time communication via **WebSockets**  
+
+---
+
+##  Technologies
 
 ### Backend (Python)
-- **FastAPI** – framework web și API REST:contentReference[oaicite:0]{index=0}  
-- **SQLAlchemy** – ORM pentru baze de date (modele: Game, Team, Player, Drawing):contentReference[oaicite:1]{index=1}  
-- **SQLite** – stocare locală (`activity.db`):contentReference[oaicite:2]{index=2}  
-- **WebSockets** – update-uri live (chat, desen, scoruri):contentReference[oaicite:3]{index=3}  
+- **FastAPI** – web framework and REST API  
+- **SQLAlchemy** – ORM for databases (models: Game, Team, Player, Drawing)  
+- **SQLite** – local storage (`activity.db`)  
+- **WebSockets** – live updates (chat, drawing, scores)  
 
 ### Frontend
-- **HTML + CSS** pentru UI:contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}  
-- **Vanilla JavaScript** pentru logica jocului: crearea jocurilor, conectare prin API și WebSocket, desen live:contentReference[oaicite:6]{index=6}  
+- **HTML + CSS** for UI  
+- **Vanilla JavaScript** for game logic: game creation, API & WebSocket connection, live drawing  
 
----
-
-## ⚙️ Instalare și rulare locală
-
-### 1. Clonează repo-ul
-```bash
-git clone https://github.com/<user>/<repo>.git
-cd ActivityGame
