@@ -626,8 +626,7 @@
       if (!isDrawing) return;
       const { x, y } = getMousePos(e);
       if (currentTool === 'eraser') {
-        // cu globalCompositeOperation = 'destination-out'
-        // linia trasată de stroke() va șterge
+
         drawingCtx.lineTo(x, y);
         drawingCtx.stroke();
       } else {
